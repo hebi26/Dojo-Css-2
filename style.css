@@ -2,6 +2,7 @@
  ====== Votre CSS =====
  ****************************/
 *{
+    /*border: 1px solid black;*/
     letter-spacing: 3px;
 }
 
@@ -24,6 +25,39 @@ nav li{
     margin-right: 40px;
 }
 
+.sousmenu{
+  padding: 0;
+  display: none;
+  text-align: center;
+  margin-left: -0.7vmin;
+  position: absolute;
+}
+.sousmenu li{
+  font-size: 1.3vmin;
+  border: 1px solid black;
+  border-radius: 2px;
+  border-top: none;
+  padding-top: 2vmin;
+  padding-bottom: 2vmin;
+  width: 100%;
+
+}
+
+
+a{
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0px;
+  font-weight: bolder;
+  font-size: 1vmin;
+
+}
+
+.headerlist li:hover .sousmenu{
+  display: block;
+}
+
+
 h1{
     font-family: "Arvo";
     font-weight: lighter;
@@ -33,15 +67,71 @@ h1{
 
 section img{
     width: 50%;
+    margin-bottom: 2vmin;
 }
 
 .one{
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.one p{
+  font-style: italic;
+  width: 50%;
+  font-size: 1.5vmin;
+}
+.one hr{
+  color: #f4f4f4;
+  width: 50%;
+}
+
+.contain{
+  border: 5px solid #f4f4f4;
+  width: 50%;
+}
+
+.contain img{
+  width: 92%;
+  margin: 4% 4% 0% 4%;
+}
+
+.contain p{
+  width: 92%;
+  margin: auto;
+}
+
+.goat{
+  display: flex;
+  padding: 1vmin 1vmin 1vmin 2.5vmin;
+}
+
+.goat li{
+  margin-right: 0.6vmin;
+  margin-bottom: 2vmin;
+  color: white;
+  background-color: #E1b3a3;
+  padding: 0.5vmin 0.5vmin;
+  border-radius: 3px;
+  font-size: 1.2vmin;
+}
+
+.contain input{
+  width: 100%;
+  text-align: center;
+  padding-top: 1.4vmin;
+  padding-bottom: 1.4vmin;
+  color: white;
+  background-color: #E1b3a3;
+  font-family: "Josefin Sans";
+  font-size: 1.5vmin;
+
+
+}
 footer{
     background-color: #F7F7F7;
     padding-top: 50px;
@@ -88,15 +178,10 @@ article ul li {
     margin-bottom: 15px;
 }
 
-
-
 ul {
     list-style: none;
 }
 
-/*video {
-
-}*/
 
 input{
     border:none;
@@ -130,6 +215,8 @@ hr{
     border-radius: 4px;
     font-family: "sans-serif","Josefin Sans";
     font-weight: bolder;
+    font-size: 1.5vmin;
+    letter-spacing: 1px;
 
 }
 
@@ -141,4 +228,3 @@ h5{
     font-weight: normal;
     letter-spacing: 1px;
 }
-
