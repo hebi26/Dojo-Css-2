@@ -22,9 +22,13 @@
                   <h5>NEWSLETTER</h5>
                   <hr>
                   <p>Subscribe to get special offers, free giveawaysand once-in a lifetime deals.</p>
-                  <form>
-                      <input class="email" type="email" placeholder="your-email@example.com">
-                      <input class="submit "type="submit" value="SUBSCRIBE">
+
+                  <form id="form" method="post" action="cible.php">
+                    <input class="name" type="text" name="name" placeholder="your name">
+                    <div class=rep id="returname"></div>
+                    <input class="email" type="text" name="email" placeholder="your-email@example.com">
+                    <div class="rep" id="returnmail"></div>
+                    <input class="submit "type="submit" value="SUBSCRIBE">
                   </form>
               </article>
           </section>
