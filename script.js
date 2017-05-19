@@ -1,48 +1,56 @@
 
 
-$(document).ready(function(){
-
+$(document).ready(function() {
 
   $("#form").validate({
-        rules: {
-          "name":{
-            "required": true,
-            "minlength": 2,
-            "maxlength": 20
-          },
-  //
-        "email":{
-            "required": true,
-            "maxlength": 50
-            // "regex": /^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})+$/
-          }
-        }
-  })
-});
+    rules: {
+      "name": {
+        "required": true,
+        "minlength": 2,
+        "maxlength": 20
+      },
 
-//       var nom = $(".name").val();
-//       var mail = $(".email").val();
-//
-//       var regexnom = new RegExp("^[a-zA-Z|_|-]+$");
-//       var regexmail = new RegExp("^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})+$");
-//
-//
-//   $(".name").focusout(function fname(){
-//
-//       if (regexnom.test(nom)){
-//         $("#returname").html('<p id="green">Format correct</p>');
-//       }
-//       else {
-//         $("#returname").html('<p id="red">Format incorrect</p>');
-//       }
-//   });
-//
-// $(".email").focusout(function fmail(){
-//
-//       if (regexmail.test(mail)) {
-//         $("#returnmail").html('<p id="green">Format correct</p>');
-//       }
-//       else {
-//         $("#returnmail").html('<p id="red">Format incorrect</p>');
-//       }
-//     });
+      "email": {
+        "required": true,
+        "maxlength": 50
+      }
+    }
+  })
+//-----------------------METHOD AJAX------------------------//
+  // $("#lecture").click(function(){
+  //    $.ajax({
+  //       url : 'list.json',
+  //       type : 'get',
+  //       dataType : 'json',
+  //      success: function (data) {
+  //      $.each( data,function(index ,d){
+  //      $('#zone').append('<li><b>' + d.name + ' </b>: ' + d.city + '</li>' );
+  //        });
+  //      },
+  //      error : function() {
+  //        $('#zone').html('ERROR !!!!!!!!!!!!!!!!!!!!!');
+  //      }
+  //    });
+  //  });
+
+//------------------------------------------------------------------------//
+  $.getJSON('list.json', function(data) {
+    $.each(data, function(index, d) {
+
+
+      $('#zone').append('<li><b>' + d.name + ' : </b>' + d.city + '</li>');
+
+    });
+
+  });
+
+  $("#zone").hide();
+
+  $('#lecture').click(function() {
+    $(this).toggleClass('active');
+    $(this).next().slideToggle(500);
+
+
+  });
+
+});

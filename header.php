@@ -14,7 +14,11 @@
         <a href="index.php"><img src="./img/logo.png"></a>
         <nav>
             <ul class="headerlist">
-                  <li>SHOP</li>
+                  <li>SHOP
+                    <ul class="sousmenu">
+                      <li><a href="page4.php">LIST SHOP</a></li>
+                    </ul>
+                  </li>
                   <li>FIND OUR GOODS</li>
                   <li>BLOG
                     <ul class="sousmenu">
